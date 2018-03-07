@@ -423,8 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d8efdfb0d7bbc45927533782736684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toPrintClass: Well what country is this, the United Arab Emirates? There's lots
-    of sweaty cameltoe and everyone's a terrorist.
+  toPrintClass: It's a Me Mario!
+  speed: 5
 --- !u!1 &2093711089
 GameObject:
   m_ObjectHideFlags: 0
