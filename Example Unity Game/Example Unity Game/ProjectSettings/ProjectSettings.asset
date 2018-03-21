@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 13
-  productGUID: 5f220b1b01ad7e54cbcd24eea304b3f9
+  productGUID: 0d2a94194df68b74eb8859ebb986ca67
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Example Unity Game
+  productName: ExampleUnityGame
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -521,14 +521,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Example Unity Game
+  metroPackageName: ExampleUnityGame
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Example Unity Game
+  metroApplicationDescription: ExampleUnityGame
   wsaImages: {}
   metroTileShortName: 
   metroCommandLineArgsFile: 
@@ -603,9 +603,9 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 03962073-438b-4cd7-8758-46e9a8592eb3
-  projectName: Example Unity Game (1)
-  organizationId: l09andc
+  cloudProjectId: 03876912-cb97-4aae-a264-9141d79b8cd1
+  projectName: ExampleUnityGame
+  organizationId: sarah-herzog
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
