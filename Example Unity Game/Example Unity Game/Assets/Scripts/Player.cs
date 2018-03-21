@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public float speed = 5;
+	public float jumpSpeed = 10;
 	public float health = 100;
 	public float invulnerableDuration = 1;
 	public float blinkDuration = 0.5f;
@@ -25,6 +26,18 @@ public class Player : MonoBehaviour {
 		Vector2 velocity = ourRigidBody.velocity;
 
 		velocity.x = horizontal * speed;
+
+		Collider2D ourCollider = GetComponent<Collider2D> ();
+
+		LayerMask groundLayer = LayerMask.GetMask ("Ground");
+
+		bool isTouchingGround = ourCollider.IsTouchingLayers (groundLayer);
+
+		bool jumpPressed = Input.GetButtonDown ("Jump");
+
+		if (jumpPressed == true && isTouchingGround == true) {
+			velocity.y = jumpSpeed;
+		}
 
 		ourRigidBody.velocity = velocity;
 
