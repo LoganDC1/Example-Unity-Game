@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 
 	private float invulnerableEndTime = 0;
 	private float blinkEndTime = 0;
-
+	private bool hasDoubleJumped = false; 
 	// Use this for initialization
 	void Start () {
 	}
@@ -33,10 +33,24 @@ public class Player : MonoBehaviour {
 
 		bool isTouchingGround = ourCollider.IsTouchingLayers (groundLayer);
 
+		if (isTouchingGround == true) {
+			hasDoubleJumped = false;
+		}
+
+		bool allowedToJump = isTouchingGround;
+
+		if (isTouchingGround == false && hasDoubleJumped == false) {
+			allowedToJump = true;
+		}
+
 		bool jumpPressed = Input.GetButtonDown ("Jump");
 
-		if (jumpPressed == true && isTouchingGround == true) {
+		if (jumpPressed == true && allowedToJump == true) {
 			velocity.y = jumpSpeed;
+
+			if (isTouchingGround == false) {
+				hasDoubleJumped = true;
+			}
 		}
 
 		ourRigidBody.velocity = velocity;
