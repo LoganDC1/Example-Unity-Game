@@ -19,7 +19,14 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		Rigidbody2D ourRigidBody = GetComponent<Rigidbody2D> ();
-		ourRigidBody.velocity = Vector2.right * speed;
+
+		float horizontal = Input.GetAxis ("Horizontal");
+
+		Vector2 velocity = ourRigidBody.velocity;
+
+		velocity.x = horizontal * speed;
+
+		ourRigidBody.velocity = velocity;
 
 		// Handle blinking while invulnerable:
 
