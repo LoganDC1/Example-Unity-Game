@@ -9,10 +9,13 @@ public class Player : MonoBehaviour {
 	public float health = 100;
 	public float invulnerableDuration = 1;
 	public float blinkDuration = 0.5f;
+	public int allowedAirJumps = 0;
 
 	private float invulnerableEndTime = 0;
 	private float blinkEndTime = 0;
-	private bool hasDoubleJumped = false; 
+	//private bool hasDoubleJumped = false;
+	private int numAirJumps = 0;
+
 	// Use this for initialization
 	void Start () {
 	}
@@ -34,12 +37,12 @@ public class Player : MonoBehaviour {
 		bool isTouchingGround = ourCollider.IsTouchingLayers (groundLayer);
 
 		if (isTouchingGround == true) {
-			hasDoubleJumped = false;
+			numAirJumps = 0;
 		}
 
 		bool allowedToJump = isTouchingGround;
 
-		if (isTouchingGround == false && hasDoubleJumped == false) {
+		if (isTouchingGround == false && numAirJumps < allowedAirJumps) {
 			allowedToJump = true;
 		}
 
@@ -49,7 +52,7 @@ public class Player : MonoBehaviour {
 			velocity.y = jumpSpeed;
 
 			if (isTouchingGround == false) {
-				hasDoubleJumped = true;
+				numAirJumps = numAirJumps + 1;
 			}
 		}
 
