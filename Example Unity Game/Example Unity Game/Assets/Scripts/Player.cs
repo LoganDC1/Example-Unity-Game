@@ -45,6 +45,9 @@ public class Player : MonoBehaviour {
 
 		bool isTouchingGround = ourCollider.IsTouchingLayers (groundLayer);
 
+		// Set touchingGround parameter on the animator
+		ourAnimator.SetBool("touchingGround", isTouchingGround);
+
 		if (isTouchingGround == true) {
 			numAirJumps = 0;
 		}
