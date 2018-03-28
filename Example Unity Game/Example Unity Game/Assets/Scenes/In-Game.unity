@@ -524,6 +524,7 @@ GameObject:
   - component: {fileID: 1779025252}
   - component: {fileID: 1779025253}
   - component: {fileID: 1779025254}
+  - component: {fileID: 1779025255}
   m_Layer: 0
   m_Name: Bing Bing Wahoo
   m_TagString: Untagged
@@ -639,6 +640,24 @@ MonoBehaviour:
   health: 100
   invulnerableDuration: 1
   blinkDuration: 0.5
+  allowedAirJumps: 0
+--- !u!95 &1779025255
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779025249}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcb0d737f96d8f444922c3a76fbcc8fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2093711089
 GameObject:
   m_ObjectHideFlags: 0
